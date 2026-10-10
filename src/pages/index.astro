@@ -1,0 +1,288 @@
+---
+import '../styles/global.css';
+
+const base = import.meta.env.BASE_URL;
+const built = new Date();
+const fmt = (d: Date) =>
+  `${String(d.getDate()).padStart(2, '0')} ${['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SET', 'OCT', 'NOV', 'DIC'][d.getMonth()]} ${d.getFullYear()}`;
+
+const folios = [
+  { id: 'solicitud', label: 'Solicitud' },
+  { id: 'noretel', label: 'NoreTel' },
+  { id: 'electoral', label: 'Electoral' },
+  { id: 'observaciones', label: 'Bugs' },
+  { id: 'adjuntos', label: 'Adjuntos' },
+  { id: 'herramientas', label: 'Herramientas' },
+  { id: 'constancia', label: 'Contacto' },
+];
+
+const email = 'luis113654@gmail.com';
+const phone = '910763682';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jose Luis Quispe Tayña · Expediente</title>
+    <meta
+      name="description"
+      content="Jose Luis Quispe Tayña, desarrollador backend en Cusco. Egresado de Ingeniería Informática y de Sistemas (UNSAAC). Proyectos reales: CRM de un proveedor de internet y una plataforma de control electoral."
+    />
+    <meta name="theme-color" content="#2f2d29" />
+    <meta property="og:title" content="Jose Luis Quispe Tayña · Expediente" />
+    <meta property="og:description" content="Desarrollador backend en Cusco. Lo que construí, los bugs que arreglé y cómo contactarme." />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='8' width='28' height='20' rx='2' fill='%23c99a3f'/%3E%3Cpath d='M2 10a2 2 0 0 1 2-2h8l3 3H2z' fill='%23b08431'/%3E%3Ccircle cx='22' cy='19' r='5' fill='none' stroke='%234b3591' stroke-width='2'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#solicitud">Saltar al contenido</a>
+
+    <header class="cover">
+      <div class="folder">
+        <div class="folder__back" aria-hidden="true"></div>
+        <div class="folder__front">
+          <p class="folder__tab">Exp. N.º 2026-0001 · Quispe Tayña, Jose Luis</p>
+          <dl class="cover__label">
+            <dt>Asunto</dt>
+            <dd class="hand">Postulación a un puesto de desarrollo de software</dd>
+            <dt>Procedencia</dt>
+            <dd>Cusco, Perú · UNSAAC, Ing. Informática y de Sistemas</dd>
+          </dl>
+          <div class="stamp stamp--received" aria-label="Recibido">
+            <span class="stamp__line">Mesa de partes</span>
+            <span class="stamp__word">Recibido</span>
+            <span class="stamp__date" data-today>{fmt(built)}</span>
+          </div>
+        </div>
+        <section class="peek" aria-labelledby="name">
+          <h1 class="peek__name" id="name">Jose Luis<br />Quispe Tayña</h1>
+          <p class="peek__role">
+            Desarrollador backend en Cusco. Hago sistemas con Laravel y Next.js, y me gusta arreglar lo que ya está en uso.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#solicitud">
+              Abrir expediente
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6" /></svg>
+            </a>
+            <a class="link-mail" href={`mailto:${email}`}>{email}</a>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Folios del expediente">
+      <ol>
+        {folios.map((f, i) => (
+          <li><a href={`#${f.id}`}><span>{String(i + 1).padStart(2, '0')}</span>{f.label}</a></li>
+        ))}
+      </ol>
+    </nav>
+
+    <main class="file">
+      <article class="folio" id="solicitud" aria-labelledby="t-solicitud">
+        <span class="folio__num" aria-hidden="true">01</span>
+        <p class="sumilla"><b>SUMILLA:</b> Solicito ser considerado para un puesto de desarrollo de software.</p>
+        <h2 id="t-solicitud">Solicitud</h2>
+        <p class="salutation">Señor(a) reclutador(a):</p>
+        <p>
+          Yo, Jose Luis Quispe Tayña, egresado de Ingeniería Informática y de Sistemas de la UNSAAC, con domicilio en Cusco, me presento y digo:
+        </p>
+        <p>
+          Hago backend, sobre todo con Laravel y últimamente con Next.js y TypeScript. Lo que más disfruto es meterle mano a sistemas que ya están en uso: entender por qué algo falla con datos reales y arreglarlo sin romper lo que ya funciona.
+        </p>
+        <p>
+          Hice mis prácticas en un proveedor de internet de Cusco, trabajando en su CRM, y ahora estoy armando una plataforma de control electoral. En los folios que siguen cuento qué problema tenía cada sistema, qué hice yo y qué salió mal en el camino.
+        </p>
+        <p>Por lo expuesto, pido revisar los folios adjuntos.</p>
+        <div class="signature">
+          <span class="signature__hand" aria-hidden="true">J. L. Quispe T.</span>
+          <span class="signature__line">Jose Luis Quispe Tayña</span>
+        </div>
+        <p class="procedencia">Cusco, {fmt(built).toLowerCase()} · Datos verificables en las entrevistas que hagan falta.</p>
+      </article>
+
+      <article class="folio" id="noretel" aria-labelledby="t-noretel">
+        <span class="folio__num" aria-hidden="true">02</span>
+        <h2 id="t-noretel">NoreTel CRM: los pagos por Yape que se revisaban a mano</h2>
+        <p class="note note--aside">Prácticas preprofesionales, abril a setiembre de 2026. 642 horas.</p>
+        <p>
+          NoreTel es un proveedor de internet de Cusco. Cuando llegué, cada pago por Yape se validaba a mano: alguien abría la captura que el cliente mandaba por WhatsApp y la comparaba con las notificaciones del celular de la empresa.
+        </p>
+        <p>
+          Terminamos con una pasarela de WhatsApp que recibe la captura, OCR para leer monto y número de operación, y una conciliación automática contra la notificación del banco. En agosto, los pagos por Yape ya se cerraban solos.
+        </p>
+        <ul class="facts figures">
+          <li>Cierres automáticos de pagos Yape: de <strong>48 %</strong> a <strong>100 %</strong>.</li>
+          <li>Un reporte que hacía <strong>601 consultas</strong> para mostrar 20 facturas ahora hace <strong>3</strong>.</li>
+          <li>Una guarda para que el mismo periodo no se facture dos veces.</li>
+          <li>Auditoría de seguridad con OWASP como guía: bloqueo de login por intentos, permisos y registro de auditoría.</li>
+          <li>Las pruebas automatizadas pasaron de <strong>173</strong> a <strong>230</strong>.</li>
+        </ul>
+        <figure class="annex">
+          <img src={`${base}anexos/conciliacion-yape.webp`} width="1400" height="868" loading="lazy" decoding="async" alt="Diagrama de secuencia: el cliente envía la captura por WhatsApp, el OCR extrae los datos y el CRM la concilia con la notificación del banco." />
+          <figcaption>Anexo A. Secuencia de conciliación Yape, tomada del informe final de prácticas.</figcaption>
+        </figure>
+        <figure class="annex">
+          <img src={`${base}anexos/bloqueo-login.webp`} width="1366" height="800" loading="lazy" decoding="async" alt="Pantalla de inicio de sesión del CRM mostrando el aviso de bloqueo temporal tras varios intentos fallidos." />
+          <figcaption>Anexo B. Bloqueo de login tras intentos fallidos, captura del CRM en local.</figcaption>
+        </figure>
+        <p>Laravel 10 modular, MySQL, PHPUnit. El código es de la empresa, pero si te interesa te lo puedo mostrar en una entrevista.</p>
+        <p class="procedencia">Procedencia: informe final de prácticas · repositorio privado, 94 de 134 commits míos.</p>
+      </article>
+
+      <article class="folio folio--pending" id="electoral" aria-labelledby="t-electoral">
+        <span class="folio__num" aria-hidden="true">03</span>
+        <div class="stamp stamp--pending">
+          <span class="stamp__word">En trámite</span>
+        </div>
+        <h2 id="t-electoral">Centro Electoral Cusco</h2>
+        <p>
+          Una plataforma para llevar el control de personeros, actas y resultados por región, provincia y distrito. La armo yo casi entera, con Next.js 15, PostgreSQL y Prisma.
+        </p>
+        <p class="note note--aside">Mejor que falte un dato a que se vea uno ajeno.</p>
+        <p>
+          Lo más entretenido ha sido el tema de permisos. Un coordinador solo puede ver su territorio, y si algo no cuadra, el sistema no le muestra nada en vez de mostrarle todo.
+        </p>
+        <ul class="facts">
+          <li>Roles por territorio y acceso que se cierra ante la duda.</li>
+          <li>Sesión con JWT en cookie HttpOnly, sin tokens en el navegador.</li>
+          <li>Historial de actas que no se edita: cada cambio queda como un registro nuevo.</li>
+          <li>Más de 20 suites de pruebas de integración.</li>
+        </ul>
+        <p class="procedencia">Procedencia: repositorio privado, 302 de 375 commits míos · sigue en desarrollo.</p>
+      </article>
+
+      <article class="folio" id="observaciones" aria-labelledby="t-obs">
+        <span class="folio__num" aria-hidden="true">04</span>
+        <h2 id="t-obs">Observaciones: bugs que me enseñaron algo</h2>
+        <ol class="observaciones">
+          <li>
+            <p><b>Clientes fantasma</b> WhatsApp empezó a mandar un identificador interno (LID) en lugar del número de teléfono, y el CRM lo guardaba como si fuera un celular. Desde ahí no confío en un dato externo sin verificar de dónde viene.</p>
+          </li>
+          <li>
+            <p><b>La factura que se cobraba dos veces</b> Un mes escrito como <code>01/08/2026 al 31/08/2026</code> y otro como <code>agosto 2026</code> eran, para el sistema, dos meses distintos. Lo resolví normalizando el periodo y validándolo dentro de la misma transacción que crea la factura.</p>
+          </li>
+          <li>
+            <p><b><code>Undefined constant "key"</code></b> Un gráfico mezclaba una variable de JavaScript dentro de una directiva de Blade. El reporte tiraba error 500 y nadie sabía por qué.</p>
+          </li>
+          <li>
+            <p><b>La terminal que cualquiera podía usar</b> La consola SSH de los routers solo pedía haber iniciado sesión. Ahora pide un permiso y deja registro de cada comando.</p>
+          </li>
+        </ol>
+        <p class="procedencia">Procedencia: incidencias del CRM de NoreTel, 2026.</p>
+      </article>
+
+      <article class="folio" id="adjuntos" aria-labelledby="t-adjuntos">
+        <span class="folio__num" aria-hidden="true">05</span>
+        <h2 id="t-adjuntos">Documentos adjuntos</h2>
+        <p>Proyectos en los que trabajé con otras personas. Donde puedo precisar mi parte, la digo.</p>
+        <table class="adjuntos">
+          <caption>Índice de trabajos en colaboración</caption>
+          <thead>
+            <tr><th scope="col">Proyecto</th><th scope="col">Lo que hice</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SIMU-UNSAAC</td>
+              <td>Simulador del examen de admisión de la UNSAAC, entre tres. Sigue en desarrollo.<br /><span class="tools">Go · Gin · Next.js · Astro · MongoDB</span></td>
+            </tr>
+            <tr>
+              <td>Sistema de Gestión Comunal</td>
+              <td>Aporté en caja, registro de comuneros, eventos y métricas.<br /><span class="tools">Laravel 12</span></td>
+            </tr>
+            <tr>
+              <td>Ferretería y Control de Asistencias</td>
+              <td>Colaboré en el desarrollo de ambos sistemas; el detalle de mi parte te lo cuento en una entrevista.</td>
+            </tr>
+            <tr>
+              <td>Red social universitaria</td>
+              <td>Proyecto de Ingeniería de Software. Me tocó el módulo de publicaciones.<br /><span class="tools">React · Express · MariaDB</span></td>
+            </tr>
+            <tr>
+              <td>Cursos de IA</td>
+              <td>Clasificador de gestos de piedra, papel o tijera: MobileNetV2 ganó con 93,65 %. Un clasificador cuántico con Qiskit contra un SVM quedó 63 % a 61 %: interesante como experimento, nada más.<br /><span class="tools">Python · Qiskit</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="procedencia">Procedencia: repositorios en github.com/luisTayna y en la cuenta luvt67.</p>
+      </article>
+
+      <article class="folio" id="herramientas" aria-labelledby="t-herr">
+        <span class="folio__num" aria-hidden="true">06</span>
+        <h2 id="t-herr">Herramientas</h2>
+        <dl class="tooling">
+          <div>
+            <dt>Uso a diario</dt>
+            <dd>Laravel, PHP, TypeScript, Next.js, MySQL, PostgreSQL, Git.</dd>
+          </div>
+          <div>
+            <dt>Las he usado en algo real</dt>
+            <dd>Prisma, Docker, NestJS, Python, Tailwind, PHPUnit.</dd>
+          </div>
+        </dl>
+        <p class="note">Me falta mucho por aprender, pero me gusta escribir la prueba antes que el arreglo.</p>
+        <p class="procedencia">Procedencia: proyectos de los folios 02 a 05.</p>
+      </article>
+
+      <article class="folio constancia" id="constancia" aria-labelledby="t-const">
+        <span class="folio__num" aria-hidden="true">07</span>
+        <h2 id="t-const">Constancia de contacto</h2>
+        <p class="constancia__body">
+          Si quieres conversar sobre algún proyecto o tienes una oportunidad, escríbeme o llámame.
+        </p>
+        <ul class="medios">
+          <li>
+            <a href={`mailto:${email}`}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5" /><path d="m3.5 6.5 8.5 7 8.5-7" /></svg>
+              <span><small>Correo</small>{email}</span>
+            </a>
+          </li>
+          <li>
+            <a href={`tel:+51${phone}`}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.6-2.3 1.4a11 11 0 0 0 6.5 6.5l1.4-2.3 4.6 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z" /></svg>
+              <span><small>Teléfono</small>910 763 682</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/luisTayna" rel="me">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z" /></svg>
+              <span><small>GitHub</small>github.com/luisTayna</span>
+            </a>
+          </li>
+        </ul>
+        <div class="stamp stamp--done" aria-hidden="true">
+          <span class="stamp__word">Atendido</span>
+        </div>
+      </article>
+    </main>
+
+    <footer class="colophon">Hecho en Cusco por Jose Luis Quispe Tayña.</footer>
+
+    <script>
+      const months = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SET', 'OCT', 'NOV', 'DIC'];
+      const d = new Date();
+      const today = `${String(d.getDate()).padStart(2, '0')} ${months[d.getMonth()]} ${d.getFullYear()}`;
+      document.querySelectorAll('[data-today]').forEach((el) => (el.textContent = today));
+
+      const links = new Map(
+        [...document.querySelectorAll<HTMLAnchorElement>('.tabs a')].map((a) => [a.hash.slice(1), a])
+      );
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (!e.isIntersecting) continue;
+            links.forEach((a) => a.removeAttribute('aria-current'));
+            links.get(e.target.id)?.setAttribute('aria-current', 'true');
+          }
+        },
+        { rootMargin: '-45% 0px -50% 0px' }
+      );
+      document.querySelectorAll('.folio').forEach((f) => io.observe(f));
+    </script>
+  </body>
+</html>
