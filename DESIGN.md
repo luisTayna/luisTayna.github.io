@@ -1,236 +1,280 @@
 ---
-name: Expediente (Jose Luis Quispe Tayña portfolio)
-description: A job applicant's expediente from a Peruvian mesa de partes, rendered as manila folder, bond folios, violet stamp ink and blue ballpoint.
+name: Portafolio - Jose Luis Quispe Tayña
+description: A crafted backend-developer portfolio on warm near-black (light by system preference), one sage accent, with evidence shown as a git log and as diffs.
 colors:
-  desk: "#2f2d29"
-  desk-edge: "#24221f"
-  manila: "#c99a3f"
-  manila-deep: "#b08431"
-  manila-ink: "#3a2a0c"
-  bond: "#fbfaf6"
-  bond-shade: "#ecebe4"
-  rule: "#d9d6cb"
-  ink: "#23221f"
-  ink-soft: "#55524a"
-  stamp: "#4b3591"
-  stamp-soft: "rgba(75, 53, 145, 0.12)"
-  ballpoint: "#1f3f9a"
-  ballpoint-cover: "#14297a"
-  staple: "#8c8f94"
+  ink-bg: "#141412"
+  ink-raised: "#1b1a18"
+  ink-line: "#2e2c28"
+  ink-text: "#ebe7df"
+  ink-muted: "#a39e93"
+  sage: "#9cc59a"
+  sage-ink: "#0f1a10"
+  add-green: "#8cc68c"
+  del-coral: "#e48a7d"
+  paper-bg: "#f6f4ef"
+  paper-raised: "#edeae3"
+  paper-line: "#d8d3c8"
+  paper-text: "#1b1a17"
+  paper-muted: "#5d584e"
+  deep-sage: "#3d6b44"
+  deep-sage-ink: "#f2f8f1"
+  paper-add-green: "#2d7034"
+  paper-del-red: "#a8352a"
+  figure-paper: "#f4f2ec"
+  figure-paper-light: "#ffffff"
 typography:
   display:
-    fontFamily: "'Sofia Sans Extra Condensed', 'Arial Narrow', sans-serif"
-    fontSize: "clamp(2.4rem, 1.4rem + 5vw, 5.25rem)"
-    fontWeight: 800
-    lineHeight: 0.92
-    letterSpacing: "0.005em"
+    fontFamily: "Schibsted Grotesk Variable, system-ui, sans-serif"
+    fontSize: "clamp(2.6rem, 1.6rem + 4.6vw, 5rem)"
+    fontWeight: 750
+    lineHeight: 0.98
+    letterSpacing: "-0.035em"
+  contact-display:
+    fontFamily: "Schibsted Grotesk Variable, system-ui, sans-serif"
+    fontSize: "clamp(1.45rem, 0.9rem + 2.8vw, 2.75rem)"
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: "-0.03em"
   headline:
-    fontFamily: "'Sofia Sans Extra Condensed', 'Arial Narrow', sans-serif"
-    fontSize: "clamp(2rem, 1.4rem + 2.6vw, 3.4rem)"
-    fontWeight: 800
-    lineHeight: 0.95
-    letterSpacing: "0.01em"
+    fontFamily: "Schibsted Grotesk Variable, system-ui, sans-serif"
+    fontSize: "clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem)"
+    fontWeight: 700
+    lineHeight: 1.12
+    letterSpacing: "-0.025em"
   title:
-    fontFamily: "'Sofia Sans Extra Condensed', 'Arial Narrow', sans-serif"
-    fontSize: "1.45rem"
-    fontWeight: 800
-    lineHeight: 1.05
-    letterSpacing: "0.03em"
+    fontFamily: "Schibsted Grotesk Variable, system-ui, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 700
+    lineHeight: 1.12
+    letterSpacing: "-0.015em"
+  lede:
+    fontFamily: "Schibsted Grotesk Variable, system-ui, sans-serif"
+    fontSize: "clamp(1.1rem, 1rem + 0.45vw, 1.3rem)"
+    fontWeight: 400
+    lineHeight: 1.5
+  list-name:
+    fontFamily: "Schibsted Grotesk Variable, system-ui, sans-serif"
+    fontSize: "1.08rem"
+    fontWeight: 650
+    lineHeight: 1.65
+  section-label:
+    fontFamily: "Schibsted Grotesk Variable, system-ui, sans-serif"
+    fontSize: "1.05rem"
+    fontWeight: 650
+    lineHeight: 1.3
+    letterSpacing: "-0.01em"
   body:
-    fontFamily: "'Atkinson Hyperlegible Next', system-ui, sans-serif"
-    fontSize: "clamp(1rem, 0.95rem + 0.25vw, 1.125rem)"
+    fontFamily: "Schibsted Grotesk Variable, system-ui, sans-serif"
+    fontSize: "clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)"
     fontWeight: 400
-    lineHeight: 1.62
+    lineHeight: 1.65
+  data:
+    fontFamily: "JetBrains Mono, ui-monospace, Cascadia Mono, monospace"
+    fontSize: "0.84rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  data-sm:
+    fontFamily: "JetBrains Mono, ui-monospace, Cascadia Mono, monospace"
+    fontSize: "0.8rem"
+    fontWeight: 400
+    lineHeight: 1.55
   label:
-    fontFamily: "'Courier Prime', 'Courier New', monospace"
-    fontSize: "0.85rem"
+    fontFamily: "JetBrains Mono, ui-monospace, Cascadia Mono, monospace"
+    fontSize: "0.82rem"
     fontWeight: 400
-    lineHeight: 1.4
-  hand:
-    fontFamily: "'Kalam', 'Comic Sans MS', cursive"
-    fontSize: "1.3rem"
+    lineHeight: 1.65
+  caption:
+    fontFamily: "JetBrains Mono, ui-monospace, Cascadia Mono, monospace"
+    fontSize: "0.75rem"
     fontWeight: 400
-    lineHeight: 1.25
+    lineHeight: 1.55
 rounded:
-  sm: "2px"
-  btn: "3px"
-  tab: "6px"
+  xs: "2px"
+  sm: "4px"
+  md: "6px"
 spacing:
-  gap-folios: "clamp(2rem, 5vw, 3.5rem)"
-  folio-pad-x: "clamp(1.25rem, 5vw, 3.75rem)"
-  stack: "1rem"
-  unit: "clamp(1rem, 0.6rem + 1.6vw, 1.75rem)"
+  xs: "0.3rem"
+  sm: "0.75rem"
+  md: "1.25rem"
+  lg: "2rem"
+  gutter: "clamp(1rem, 0.5rem + 2.5vw, 2.5rem)"
+  section: "clamp(3.5rem, 8vw, 6rem)"
+  measure: "42rem"
+  label-column: "14rem"
+  page: "72rem"
 components:
   button-primary:
-    backgroundColor: "{colors.stamp}"
-    textColor: "#ffffff"
-    typography: "{typography.title}"
-    rounded: "{rounded.btn}"
-    padding: "0.8rem 1.3rem"
-  folio:
-    backgroundColor: "{colors.bond}"
-    textColor: "{colors.ink}"
-    padding: "clamp(2.25rem, 5vw, 3.75rem) clamp(1.25rem, 5vw, 3.75rem) clamp(1.5rem, 4vw, 2.5rem)"
-    width: "min(46rem, 100% - 2rem)"
-  folder-tab:
-    backgroundColor: "{colors.manila}"
-    textColor: "{colors.manila-ink}"
-    rounded: "{rounded.tab}"
-    height: "2.6rem"
-  index-tab:
-    backgroundColor: "{colors.manila}"
-    textColor: "{colors.manila-ink}"
-    padding: "0.45rem 1.6rem 0.45rem 0.8rem"
-  stamp:
-    textColor: "{colors.stamp}"
-    rounded: "{rounded.tab}"
-    padding: "0.55rem 1rem 0.5rem"
-  contact-row:
-    textColor: "{colors.ink}"
-    padding: "0.9rem 1rem"
-  contact-row-hover:
-    backgroundColor: "{colors.stamp-soft}"
+    backgroundColor: "{colors.sage}"
+    textColor: "{colors.sage-ink}"
+    typography: "{typography.data-sm}"
+    rounded: "{rounded.sm}"
+    padding: "0.7rem 1.1rem"
+  log-block:
+    backgroundColor: "{colors.ink-raised}"
+    textColor: "{colors.ink-text}"
+    typography: "{typography.data-sm}"
+    rounded: "{rounded.md}"
+    padding: "0.7rem 1rem 0.9rem"
+  diff-block:
+    backgroundColor: "{colors.ink-bg}"
+    textColor: "{colors.ink-text}"
+    typography: "{typography.data}"
+    rounded: "{rounded.md}"
+    padding: "0.3rem 0.9rem 0.3rem 0.5rem"
+  diff-file-header:
+    backgroundColor: "{colors.ink-raised}"
+    textColor: "{colors.ink-muted}"
+    typography: "{typography.caption}"
+    padding: "0.55rem 0.9rem"
+  figure-image:
+    backgroundColor: "{colors.figure-paper}"
+    rounded: "{rounded.sm}"
 ---
 
-# Design System: Expediente
+# Design System: Portafolio - Jose Luis Quispe Tayña
 
 ## Overview
 
-**Creative North Star: "The Mesa de Partes File"**
+**Creative North Star: "The Working Terminal"**
 
-The page is a job applicant's expediente as a Peruvian mesa de partes would receive it. A dark desk holds a manila folder; opening it reveals stapled bond-paper folios, each stamped, annotated by hand in blue ballpoint, and signed. Everything on the page is a material from that world: manila card, bond paper, rubber-stamp ink, ballpoint, staples, a paper clip, typewritten folio data, photocopied annexes. It refuses the dark terminal card grid that developer portfolios default to.
+The page reads like a developer's own terminal and repository history, set in a well-made editorial frame. Evidence is shown in the materials of the trade: a real `git log --oneline` block in the hero, before/after metrics written as a unified diff, commit hashes inline next to the bug they fixed. The warm near-black ground and a single sage accent keep it calm and specific; nothing is decorated that is not also information.
 
-Density is that of a form: generous bond margins, short measure, data set in typewriter mono, headings in condensed stamp capitals. Imperfection is deliberate but small (folios rotate under half a degree, the stamp is tilted and ink-broken, notes lean) so the file feels handled, never messy. Copy is first-person and plain; the form's own vocabulary (Sumilla, Procedencia, Observaciones, Adjuntos, Constancia) carries structure.
+Density is low and measured. Content sits in a 42rem column beside a sticky label column, so each section reads like a file with a name on the left and its body on the right. A proportional grotesque carries the voice; a monospace carries the data (hashes, numbers, stacks, dates). Dark is the default; a warm paper light theme follows the system preference with the same structure and a deeper sage for contrast.
 
 **Key Characteristics:**
-- Dark desk, ochre manila, near-white bond: three material fields, no gradients.
-- One ink for official marks (violet stamp), one for personal marks (blue ballpoint).
-- Four voices in four faces: stamp caps, hyperlegible body, typewriter data, handwriting notes.
-- Depth by stacked paper and soft ground shadows, never by glow.
-- Every folio ends in a provenance line.
+- Warm near-black ground with a warm off-white text, never pure black or pure white in the dark theme.
+- One accent (sage) used for the cursor, hashes, the primary action, markers, and focus.
+- Two voices: Schibsted Grotesk for prose, JetBrains Mono for anything that is data.
+- Flat surfaces; depth comes from 1px lines and a slightly raised tone, never shadows.
+- Metrics are diffs (red minus, green plus), not tiles.
+- Sticky left label column, 42rem reading measure.
 
 ## Colors
 
-A restrained material palette: three paper fields plus two ink families, each ink with one job.
+A warm neutral ground, one sage accent, and a red/green pair reserved for diff semantics. Theme values are redefined on the same custom properties under `prefers-color-scheme: light`.
 
 ### Primary
-- **Rubber-Stamp Violet** (#4b3591): official ink. Stamps (RECIBIDO, EN TRÁMITE, constancia), the primary button, list markers, observation numerals, focus outline, hover tint (as stamp-soft).
+- **Sage** (`sage`, dark theme) and **Deep Sage** (`deep-sage`, light theme): the single accent. Text cursor, commit hashes, the primary contact button fill, list markers, live-status text, link underlines, caret, selection, focus ring, hover color. The light-theme value is darkened so it holds contrast on paper.
+- **Sage Ink** (`sage-ink`) and **Deep Sage Ink** (`deep-sage-ink`): text on any sage fill.
 
-### Secondary
-- **Blue Ballpoint** (#1f3f9a): the applicant's own hand. Links, folio numbers, margin notes, signature.
-- **Cover Ballpoint** (#14297a): the same pen, darker, used only on the handwritten Asunto line over manila where #1f3f9a failed contrast.
-
-### Tertiary
-- **Folder Manila** (#c99a3f) and **Manila Deep** (#b08431): folder front, tab, index tabs, selection highlight; deep for the folder back and scrollbar. **Manila Ink** (#3a2a0c) is the only text color on manila.
+### Secondary (semantic only)
+- **Add Green** (`add-green`; `paper-add-green` in light) and **Del Coral** (`del-coral`; `paper-del-red` in light): used only in diff rows for the sign and the value, with an 8% (7% for light red) tint of the same hue as the row background.
 
 ### Neutral
-- **Desk** (#2f2d29) and **Desk Edge** (#24221f): page ground and scrollbar track.
-- **Bond** (#fbfaf6) and **Bond Shade** (#ecebe4): folio paper and its hairline lower edge.
-- **Ink** (#23221f) and **Ink Soft** (#55524a): body text and secondary data (captions, provenance, tools).
-- **Rule** (#d9d6cb): table rows, annex borders, dashed provenance divider.
-- **Staple** (#8c8f94): metal for staples and the clip.
+- **Ink Bg** (`ink-bg`) / **Paper Bg** (`paper-bg`): page ground.
+- **Ink Raised** (`ink-raised`) / **Paper Raised** (`paper-raised`): the log block and the diff file header; one step above the ground.
+- **Ink Line** (`ink-line`) / **Paper Line** (`paper-line`): all 1px borders and section dividers; also the scrollbar thumb.
+- **Ink Text** (`ink-text`) / **Paper Text** (`paper-text`): primary text.
+- **Ink Muted** (`ink-muted`) / **Paper Muted** (`paper-muted`): secondary text, mono metadata, captions.
+- **Figure Paper** (`figure-paper`, `figure-paper-light`): backing for the diagram image so a light-background figure sits cleanly on either theme. In dark theme the image is also dimmed with `filter: brightness(0.88) contrast(1.05)`.
 
 ### Named Rules
-**The Two Inks Rule.** Violet is institutional (stamps, the one button, structure markers); blue is personal (links, notes, numbers, signature). Never swap them and never add a third ink.
+**The One Sage Rule.** Sage is the only chromatic accent outside diff semantics. It marks things you can act on or that are the author's own (hashes, cursor, primary action, focus). If a second accent seems needed, the hierarchy is wrong.
 
-**The Paper Field Rule.** Text sits on bond or manila, never directly on the desk, except the one colophon line. Any text on manila uses Manila Ink or the cover ballpoint.
+**The Diff Color Rule.** Green and red appear only inside a diff row. They never decorate headings, badges, or buttons.
 
 ## Typography
 
-**Display Font:** Sofia Sans Extra Condensed (800, 600 for stamp sublines; Arial Narrow fallback)
-**Body Font:** Atkinson Hyperlegible Next (400, 400 italic, 700)
-**Label/Mono Font:** Courier Prime (400, 700)
-**Hand Font:** Kalam (400, 700)
+**Display / Body Font:** Schibsted Grotesk Variable (with system-ui, sans-serif)
+**Label / Mono Font:** JetBrains Mono, weights 400 and 700 (with ui-monospace, Cascadia Mono, monospace)
 
-**Character:** Stamp capitals for authority, a hyperlegible humanist for reading Spanish prose on a phone, typewriter for the form's data, handwriting only for what a person would write by pen.
+**Character:** A friendly, slightly narrow grotesque with tight, negative tracking at large sizes, paired with a plain monospace that signals "this is a real value". The grotesque speaks; the mono shows its work.
 
 ### Hierarchy
-- **Display** (800, clamp 2.4rem to 5.25rem, 0.92): the applicant's name on the first folio, uppercase, balanced.
-- **Headline** (800, clamp 2rem to 3.4rem, 0.95): folio titles (h2), uppercase, max 18ch.
-- **Title** (800, 1.45rem, 1.05): h3 and the button label scale (1.15rem); observation and tooling headings at 1.15 to 1.3rem.
-- **Body** (400, clamp 1rem to 1.125rem, 1.62): prose, capped at 68ch.
-- **Label** (Courier Prime 0.82 to 1rem): provenance, captions, sumilla, cover label, contact rows, email link.
-- **Hand** (Kalam 700, 1.3rem notes, 1.55rem folio numbers, 2rem signature): ballpoint annotations only.
+- **Display** (750, `clamp(2.6rem, 1.6rem + 4.6vw, 5rem)`, 0.98, -0.035em): the name in the hero only. Balanced wrap, followed by a blinking sage block cursor.
+- **Contact Display** (700, `clamp(1.45rem, 0.9rem + 2.8vw, 2.75rem)`, 1.1, -0.03em): the email address in the contact section; may break anywhere to fit narrow screens.
+- **Headline** (700, `clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem)`, 1.12, -0.025em): the h3 of a section body (project or role title).
+- **Title** (700, 1.25rem, -0.015em): h3 of each entry in the numbered bug list.
+- **Section Label** (650, 1.05rem, 1.3, -0.01em): the h2 in the sticky left column.
+- **List Name** (650, 1.08rem): project names in the other-projects list; definition terms in tools use 650 at body size.
+- **Lede** (400, `clamp(1.1rem, 1rem + 0.45vw, 1.3rem)`, 1.5, max 34ch): hero intro; second sentence in muted color.
+- **Body** (400, `clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)`, 1.65): all prose, held to the 42rem measure.
+- **Data** (mono 400, 0.84rem, 1.5): diff rows. Values in 700.
+- **Data Small** (mono 400, 0.8rem, 1.55): log block, section meta line. Primary button uses mono 0.9rem 700.
+- **Label** (mono 400, 0.82rem): header bar, stack lines; 0.78rem for the sublabel under a section label and for footer and `ref` lines; 0.88em for inline `code`.
+- **Caption** (mono 0.75rem for log caption and diff file header at 0.76rem; sans 0.82rem for figure captions).
 
 ### Named Rules
-**The Four Voices Rule.** Caps for headings and stamps, Atkinson for prose, Courier for data and provenance, Kalam for pen marks. A new piece of text picks the voice of the person who would have produced it on paper.
+**The Mono Means Data Rule.** Monospace is for hashes, numbers, dates, stacks, commands, and file-like labels. Prose never goes in mono; data never goes in the grotesque.
 
-**The Handwriting Is Annotation Rule.** Kalam never carries paragraphs; it appears in short notes, numbers, the signature and the cover subject line.
+**The Tight Display Rule.** Letter-spacing tightens as size grows (-0.01em at 1.05rem to -0.035em at display size). Sizes above 1.25rem use negative tracking and `text-wrap: balance` for headings.
 
 ## Layout
 
-A single column. The cover fills the viewport (min-height 100svh) with a folder up to 60rem wide; below it the file is a vertical stack of folios, each a centered sheet of min(46rem, 100% minus 2rem), separated by clamp(2rem, 5vw, 3.5rem). Folio padding scales clamp(1.25rem to 3.75rem) horizontally. Prose measure is 68ch; headlines 18ch.
+A single centered wrapper, `min(72rem, 100% - 2 * gutter)`, with a fluid gutter (`clamp(1rem, 0.5rem + 2.5vw, 2.5rem)`). Each content section is a two-column grid: a 14rem sticky label column and a content column capped at 42rem (`--measure`), separated by a fluid gap (`clamp(2rem, 6vw, 5rem)`). The label column holds the h2 (with an optional mono sublabel) and sticks at `top: 1.5rem`.
 
-Breakpoints as built: 80rem shows the fixed right-edge index tabs (hidden below); 60rem moves the RECIBIDO stamp from absolute on the cover into flow, right-aligned, and shrinks the stamp word; 40rem removes folio rotation, unfloats margin notes, turns the Adjuntos table into stacked rows and places the EN TRÁMITE stamp in flow.
+The hero is a two-column grid (1.05fr / 1fr, bottom-aligned) with the name, lede, and contact row on the left and the git log on the right. Section vertical padding is fluid, `clamp(3.5rem, 8vw, 6rem)`; hero padding is `clamp(3rem, 9vw, 7rem)` top and `clamp(3rem, 7vw, 5.5rem)` bottom. Sections are divided by 1px lines, not by background changes.
 
-The cover is shortened (front min-height min(40svh, 20rem)) so the first folio with name, role, button and email peeks into the first viewport. Spacing is irregular by design; the rhythm lives in the folio gap and the 1rem paragraph stack rather than a numeric grid.
+Responsive: below 56rem the hero and sections collapse to one column and the label column becomes static, above its content. Below 40rem the header nav is hidden. Spacing rhythm inside content uses small rem steps (0.3, 0.45, 0.75, 1.1, 1.25, 1.75, 2.25rem); list gaps are 1.1rem to 2.25rem.
+
+### Named Rules
+**The Label Column Rule.** Every top-level section has a left label (h2) and a right body. Sections do not span the full width and prose never exceeds 42rem.
 
 ## Elevation & Depth
 
-Depth is stacked paper over a dark desk, with soft ground-cast shadows that sit beneath sheets. There are no glows and no offset shadows.
-
-### Shadow Vocabulary
-- **Folder front** (`0 30px 50px -28px rgba(0,0,0,0.75), 0 2px 0 rgba(255,255,255,0.18) inset`): the cover.
-- **Folio** (`0 1px 0 #ecebe4, 0 22px 40px -24px rgba(0,0,0,0.7)`): each bond sheet.
-- **Peek folio** (`0 18px 30px -18px rgba(0,0,0,0.6)`): the first sheet under the cover.
-- **Annex** (`0 10px 18px -12px rgba(0,0,0,0.45)`): photocopy on the folio.
-- **Button** (`0 6px 14px -6px rgba(75,53,145,0.7)`, hover `0 10px 18px -8px` plus 2px lift): the stamp-violet button.
-- **Staple and clip** (`0 1px 1.5px rgba(0,0,0,0.35)` or `1px 1px 1.5px rgba(0,0,0,0.3)`): small metal contact shadows.
+Flat. There are no box shadows anywhere. Depth is conveyed by a one-step tonal raise (`ink-raised`) for the log block and diff header, and by 1px `ink-line` borders. The only vertical movement is a 1px lift on the primary button on hover and a 4px slide-in on log lines at load.
 
 ### Named Rules
-**The Sheet-on-Desk Rule.** A shadow is cast straight down and spread negative, the way a sheet sits on a desk. Never glow, never offset-block.
-
-**The Paper Fibre Rule.** Manila surfaces carry the SVG fractalNoise fibre layer under multiply; bond stays clean. Stamps use the ink-breakup mask.
-
-Motion: the cover lifts (rotateX -16deg, brightness 0.86) over the first 70svh of root scroll where scroll timelines are supported; the RECIBIDO stamp presses in (650ms, ease-out-expo `cubic-bezier(0.16, 1, 0.3, 1)`) after 450ms. Both and smooth scroll are disabled under prefers-reduced-motion.
+**The Flat Terminal Rule.** Surfaces are flat at rest. Boundaries are lines or a tonal step, never shadows or glows.
 
 ## Shapes
 
-Square paper with tiny radii. Folios, sumilla, contact rows and annexes are right-angled; the button is 3px, folder and tabs 4 to 6px (tabs round only their free corners, index tabs round their left edge, 5px). Borders are ink-colored 1.5px rules for form boxes, dashed 2px stamp-violet for the in-progress folio, a dashed 1px rule for provenance. Stamps are a 3px violet border plus a 1.5px offset outline, 6px radius, tilted -9, 7 or -4 degrees. Metal is drawn in CSS: a rotated gradient staple on every folio and a rounded-rectangle paper clip on annexes. Raster annexes are grayscale photocopies with multiply blend and a -0.8deg tilt, each with a provenance sidecar.
+Small, practical radii that read as tool UI, not as soft cards. Three values are in use and all are canonical:
+- **2px** (`xs`): the focus-visible outline corner.
+- **4px** (`sm`): the primary button and the figure image.
+- **6px** (`md`): the git log block and the diff block (clipped with `overflow: hidden` so inner rows share the corner).
+
+Borders are 1px solid in the line color. Links use a 1.5px sage underline with 0.2em offset (2px on the large contact link). Separators between list items are 1px top borders. The favicon uses a 6/32 rounded square, consistent with the 6px family. No pills, no circles, no fully round shapes.
 
 ## Components
 
 ### Buttons
-- **Shape:** near-square (3px).
-- **Primary:** stamp violet, white text, Sofia Sans 800 at 1.15rem uppercase, tracking 0.08em, padding 0.8rem 1.3rem, inline SVG arrow.
-- **Hover / Focus:** lifts 2px with a deeper tinted shadow; active drops 1px; focus uses the global 3px violet outline at 3px offset.
-- **Secondary:** a plain ballpoint-blue underlined link in Courier (the email), underline thickens on hover.
+- **Shape:** 4px radius.
+- **Primary:** sage fill, sage-ink text, mono 700 at 0.9rem, padding 0.7rem 1.1rem, with a leading 1.05rem stroked icon at 0.5rem gap.
+- **Hover / Focus:** hover lifts 1px (`translateY(-1px)`, 180ms, `cubic-bezier(0.16, 1, 0.3, 1)`) and keeps the ink color; focus shows a 2px sage outline at 3px offset.
+- **Secondary:** text links in the contact row: mono 0.9rem, no underline, inherit color; muted in the contact section; hover turns sage.
 
-### Cards / Containers (Folio)
-- **Corner Style:** square.
-- **Background:** bond, with a staple pseudo-element top-left and a Kalam folio number top-right.
-- **Shadow Strategy:** Folio shadow; alternating -0.35deg and +0.3deg rotation, flat under 40rem.
-- **Internal Padding:** see Layout. Each ends with a `.procedencia` Courier line over a dashed rule.
+### Git Log Block (signature)
+A figure styled as a terminal: a command line (`$` in sage, rest muted) over a hairline, then an ordered list of real commits, each a 4.6rem sage hash column and a message. Mono 0.8rem, raised background, 6px radius, 1px line. Lines fade in with a staggered 360ms delay (300ms + 110ms per row) only when motion is allowed. A muted 0.75rem caption states the commits are real.
 
-### Navigation (Index tabs)
-Fixed manila tabs at the right edge, vertically centered, shown from 80rem. Courier number plus Sofia caps label; inactive tabs sit 0.6rem off-edge and slide flush on hover or when current. Below 80rem the "Abrir expediente" button and in-page links carry navigation.
+### Diff Block (signature)
+A figure that shows before/after metrics as a unified diff. Header row with a file-like name (mono 0.76rem, muted, raised background). Rows are a 3-column grid (sign, label, value). Removed rows get the coral sign, value, and 8% tint; added rows get the green equivalent. Values are mono 700 and never wrap. Pairs of a removed then an added row are separated by a 1px line.
 
-### Stamp (signature component)
-Inline-grid, violet, three lines (small caps line, large word, Courier date), broken-up by the ink mask. Variants: received (cover), pending (EN TRÁMITE, dashed folio outline), done (constancia).
+### Section Heading Pair
+The sticky h2 (section label) with an optional mono sublabel in muted color underneath (for date range or role). Sticky on wide screens only.
 
-### Form data blocks
-- **Sumilla:** 1.5px ink box, Courier, right-aligned, max 24rem, opens a folio.
-- **Margin note:** Kalam blue floated right (13rem, rotated 2.5deg), no border or rule; unfloats on mobile.
-- **Observaciones:** counter-numbered list, violet Courier numerals in a 3.2rem column, stamp-caps item titles.
-- **Adjuntos:** table with 2px ink head rule and hairline rows; stacks on mobile.
-- **Medios de contacto:** full-width bordered rows (max 30rem), Courier, violet inline SVG icon, violet-tint hover.
-- **Annex:** grayscale photocopy under a drawn clip, Courier caption.
+### Lists
+- **Facts:** bulleted list with an sage `›` marker.
+- **Projects:** rows with top and bottom 1px lines; name in 650 with an optional sage mono tag, description in muted, stack line in mono.
+- **Bugs:** numbered list, title in the Title style, short paragraph, optional mono reference line with an sage hash.
+- **Tools:** definition list, term 650, definition in mono muted.
+
+### Navigation
+Header bar in mono 0.82rem, muted: identity text left, anchor links right with 1.25rem gaps, no underline, hover sage. Hidden below 40rem. A skip link appears on focus as an sage chip.
+
+### Figure
+Diagram image with a 1px line border, 4px radius, and a light backing; muted sans caption at 0.82rem. Lazy-loaded with explicit dimensions.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** give each new piece of content a paper-world carrier (form field, stamp, note, annex, tab) before inventing a UI pattern.
-- **Do** use violet for official marks and blue for hand marks; keep text on bond or manila.
-- **Do** set new headings in Sofia Sans 800 uppercase and new data in Courier Prime.
-- **Do** end every folio with a Courier provenance line; keep every claim defensible.
-- **Do** drop rotations, floats and absolute stamps at the 60rem and 40rem breakpoints so phone layouts stay flat and readable.
-- **Do** keep the tilt small (under 1deg for sheets and annexes; stamps and notes may lean further).
-- **Do** gate cover lift and stamp press behind prefers-reduced-motion.
+- **Do** keep every neutral warm; use the ink/paper token pairs and never pure `#000` or `#fff` as a page ground.
+- **Do** use sage only for the cursor, hashes, the primary action, markers, status text, link underlines, caret, selection, and focus.
+- **Do** write quantitative before/after comparisons as diff rows (red minus, green plus) inside a diff block.
+- **Do** put hashes, numbers, dates, and stacks in JetBrains Mono; put prose in Schibsted Grotesk.
+- **Do** hold prose to 42rem and keep the 14rem sticky label column for any new section.
+- **Do** use the radius set 2px, 4px, 6px only: 4px for small controls and images, 6px for bordered blocks.
+- **Do** gate motion behind `prefers-reduced-motion: no-preference`; keep transitions to transform and opacity with the shared ease-out.
+- **Do** keep content real: commit hashes and messages and metrics must come from the actual work.
 
 ### Don't:
-- **Don't** return to a dark terminal card grid, metric tiles, gradient banners, or generic cards.
-- **Don't** add a third ink, glow, blur shadow in color other than stamp violet on the button, or hard offset shadows.
-- **Don't** set paragraphs in handwriting or Courier.
-- **Don't** add side stripes or colored left borders to notes; margin notes are bare ballpoint.
-- **Don't** put ballpoint #1f3f9a on manila; use Cover Ballpoint #14297a there.
-- **Don't** invent photos, testimonials or metrics; annexes are real screenshots or diagrams with provenance sidecars.
+- **Don't** add box shadows, glows, or gradients; depth is a tonal step and a 1px line.
+- **Don't** present metrics as big-number tiles or cards.
+- **Don't** add a second accent color or use green or red outside diff rows.
+- **Don't** switch themes with a toggle; theme follows `prefers-color-scheme`.
+- **Don't** set body prose in mono or data in the grotesque.
+- **Don't** use pill or fully rounded shapes.
+
+### Not canonized (defects the build carries)
+- The `●` status glyph in the "en desarrollo" meta line is a text glyph used as an icon; do not reuse it as a status-icon pattern on new surfaces.
+- Duplicate `.stack` margin overrides at the end of the stylesheet are residue, not a rule.
